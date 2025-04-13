@@ -71,6 +71,16 @@ Ask questions like:
 - _“What zoning changes were discussed in January 2024?”_
 - _“What initiatives have been proposed to address crime?”_
 - _“Was affordable housing discussed in 2024?”_
+- _“Were there any proposed rezoning applications for downtown Whitehorse in 2023?”_
+- _“What updates were made to the Official Community Plan in the past year?”_
+- _“What are the key highlights from the 2025–2028 Capital Expenditure Program?”_
+- _“How much funding was allocated to housing development in 2024?”_
+- _“What actions has the City Council taken to address affordable housing since 2023?”_
+- _“Were there any discussions about new housing developments in the Whistle Bend area?”_
+- _“Has the City received any public feedback on housing affordability in recent meetings?”_
+- _"What infrastructure projects were approved to improve sustainability or climate resilience?"_
+- _"What major land use changes were approved in the 2024 planning cycle?"_
+- _“Did Council discuss any transportation upgrades or roadworks for 2024?”_
 
 ---
 
