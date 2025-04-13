@@ -56,7 +56,7 @@ These include:
 
 ## Live Demo
 
-Visit the live search portal: [https://pidoko.github.io/civic-ai/]
+Visit the live search portal: [[https://pidoko.github.io/civic-ai/](https://pidoko.github.io/civic-ai-search/)]
 
 
 Ask questions like:
