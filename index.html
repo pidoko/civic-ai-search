@@ -1,11 +1,46 @@
-<!-- Widget JavaScript bundle -->
+<!-- Vertex AI Search Widget -->
 <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
 
-<!-- Search widget element is not visible by default -->
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #f9f9f9;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full height for vertical centering */
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  #searchWidgetTrigger {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 600px) {
+    #searchWidgetTrigger {
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+    }
+  }
+</style>
+
+<div class="search-container">
+  <input placeholder="Search here" id="searchWidgetTrigger" />
+</div>
+
 <gen-search-widget
   configId="c6d6616c-c71f-4f1b-b5af-9344fcd18aa9"
   triggerId="searchWidgetTrigger">
 </gen-search-widget>
-
-<!-- Element that opens the widget on click. It does not have to be an input -->
-<input placeholder="Search here" id="searchWidgetTrigger" />
