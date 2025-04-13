@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Civic AI Search</title>
+
+  <!-- Widget JS bundle from Google -->
+  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+    }
+    #searchWidgetTrigger {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ask a question about Whitehorse City Council</h1>
+
+  <!-- Trigger element -->
+  <input placeholder="Search here..." id="searchWidgetTrigger" />
+
+  <!-- Search Widget -->
+  <gen-search-widget
+    configId="c6d6616c-c71f-4f1b-b5af-9344fcd18aa9"
+    triggerId="searchWidgetTrigger">
+  </gen-search-widget>
+</body>
+</html>
