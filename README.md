@@ -10,7 +10,7 @@ Traditional government archives are not search-friendly. Meeting minutes and age
 
 ## Documents Covered
 
-We collected and cleaned **688 documents** from the official Whitehorse City Council archive:
+I collected and cleaned **688 documents** from the official Whitehorse City Council archive:
 
 > https://www.whitehorse.ca/city-council/meetings/agendas-minutes-and-reports/
 
