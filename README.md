@@ -47,7 +47,7 @@ These include:
 
     Open Data Principles: GCS enables public-read access for controlled transparency, aligning with the goal of making civic data accessible without compromising security or control.
 
-The uploaded files were named and structured using a consistent, machine-readable format (regular_council_agenda_YYYY-MM-DD.pdf, etc.), making the ingestion process seamless for Vertex AI Search. This ensured high-quality indexing and enabled accurate grounding of user queries in the source material.
+   The uploaded files were named and structured using a consistent, machine-readable format (regular_council_agenda_YYYY-MM-DD.pdf, etc.), making the ingestion process seamless for Vertex AI Search. This ensured high-quality indexing and enabled accurate grounding of user queries in the source material.
 
 3. **Vertex AI Search Setup**  
    - Created a Datastore (`civic-ai-datastore`)
