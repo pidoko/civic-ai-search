@@ -1,63 +1,52 @@
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #f9f9f9;
-    }
-
-    h1 {
-      font-size: 2em;
-      color: #1a237e;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1em;
-      font-weight: normal;
-      color: #444;
-      max-width: 700px;
-      margin: 0 auto 40px auto;
-      line-height: 1.6;
-    }
-
-    #searchWidgetTrigger {
-      font-size: 1rem;
-      padding: 12px 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 80%;
-      max-width: 400px;
-      cursor: pointer;
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ask Whitehorse Council</title>
+  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
 </head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
 
-<body>
   <h1>Ask Questions Based on City Council Agendas, Minutes, and Reports</h1>
-
-  <h2>
-    Get clear, reliable answers grounded in official Whitehorse City Council meeting documents. All responses are sourced from published agendas, minutes, and supporting reports available at:<br />
-    <a href="https://www.whitehorse.ca/our-government/city-council/meetings/agendas-minutes-and-reports/#1651084772994-e30573fb-d311" target="_blank">
-      whitehorse.ca/city-council/meetings/agendas-minutes-and-reports
+  <p style="max-width: 600px; margin: auto;">
+    Get clear, reliable answers grounded in official Whitehorse City Council meeting documents.<br />
+    All responses are sourced from published agendas, minutes, and supporting reports available at:<br />
+    <a href="https://whitehorse.ca/city-council/meetings/agendas-minutes-and-reports/" target="_blank">
+      whitehorse.ca/city-council/meetings/agendas-minutes-and-reports/
     </a>
-  </h2>
+  </p>
 
-  <!-- Ask a Question Button -->
-    <button id="searchWidgetTrigger" style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">
+  <!-- Search Input and Button -->
+  <div style="margin-top: 40px;">
+    <input
+      type="text"
+      id="searchBox"
+      placeholder="Search here..."
+      style="width: 300px; padding: 10px; font-size: 1rem;" />
+    <button
+      id="searchButton"
+      style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">
       Ask a Question
     </button>
+  </div>
 
-  <!-- Vertex AI Search Widget (invisible until triggered) -->
-  <gen-search-widget
-    configId="c6d6616c-c71f-4f1b-b5af-9344fcd18aa9"
-    triggerId="searchWidgetTrigger">
-  </gen-search-widget>
+  <!-- Vertex AI Search Widget -->
+  <gen-search-widget configId="c6d6616c-c71f-4f1b-b5af-9344fcd18aa9" id="searchWidget"></gen-search-widget>
 
+  <!-- Custom trigger behavior -->
   <script>
-    // OPTIONAL: For backend to generate authToken, insert it here
-    const searchWidget = document.querySelector('gen-search-widget');
-    // searchWidget.authToken = "<JWT or OAuth token>";
+    const button = document.getElementById('searchButton');
+    const input = document.getElementById('searchBox');
+    const widget = document.getElementById('searchWidget');
+
+    button.addEventListener('click', () => {
+      const query = input.value.trim();
+      if (query.length === 0) return;
+
+      // Trigger the widget programmatically
+      widget.open({ query });
+    });
   </script>
+
 </body>
 </html>
