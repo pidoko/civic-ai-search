@@ -40,7 +40,14 @@ These include:
    Scraped and renamed 688 Whitehorse PDF documents using a consistent `YYYY-MM-DD-subject_category.pdf` format.
 
 2. **Upload to GCS**  
-   Stored files in a Google Cloud Storage bucket designed for ingestion by Vertex AI Search.
+   All 688 cleaned PDF documents were uploaded to a Google Cloud Storage (GCS) bucket strategically provisioned in the us-west1 region (Oregon). This region was selected deliberately for the following reasons:
+    Climate-Conscious Cloud Hosting: us-west1 is one of Google Cloud's low-carbon regions, powered by renewable energy sources. Hosting the dataset in this region aligns with the project’s civic mission to support sustainability and responsible computing.
+
+    Low Latency with Vertex AI: Vertex AI’s vector search, document AI, and LLM services are all available in us-west1, ensuring fast, in-region processing for indexing, querying, and embedding.
+
+    Open Data Principles: GCS enables public-read access for controlled transparency, aligning with the goal of making civic data accessible without compromising security or control.
+
+The uploaded files were named and structured using a consistent, machine-readable format (regular_council_agenda_YYYY-MM-DD.pdf, etc.), making the ingestion process seamless for Vertex AI Search. This ensured high-quality indexing and enabled accurate grounding of user queries in the source material.
 
 3. **Vertex AI Search Setup**  
    - Created a Datastore (`civic-ai-datastore`)
