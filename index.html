@@ -1,35 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Civic AI Search</title>
-
-  <!-- Widget JS bundle from Google -->
-  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
-
-  <style>
+<style>
     body {
-      font-family: sans-serif;
-      padding: 40px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f9f9f9;
     }
+
+    h1 {
+      font-size: 2em;
+      color: #1a237e;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1em;
+      font-weight: normal;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      line-height: 1.6;
+    }
+
     #searchWidgetTrigger {
-      padding: 10px;
-      font-size: 16px;
-      width: 300px;
+      font-size: 1rem;
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 80%;
+      max-width: 400px;
+      cursor: pointer;
     }
   </style>
 </head>
-<body>
-  <h1>Ask a question about Whitehorse City Council</h1>
 
-  <!-- Trigger element -->
+<body>
+  <h1>Ask Questions Based on City Council Agendas, Minutes, and Reports</h1>
+
+  <h2>
+    Get clear, reliable answers grounded in official Whitehorse City Council meeting documents. All responses are sourced from published agendas, minutes, and supporting reports available at:<br />
+    <a href="https://www.whitehorse.ca/city-council/meetings/agendas-minutes-and-reports/" target="_blank">
+      whitehorse.ca/city-council/meetings/agendas-minutes-and-reports
+    </a>
+  </h2>
+
+  <!-- Widget trigger input -->
   <input placeholder="Search here..." id="searchWidgetTrigger" />
 
-  <!-- Search Widget -->
+  <!-- Vertex AI Search Widget (invisible until triggered) -->
   <gen-search-widget
     configId="c6d6616c-c71f-4f1b-b5af-9344fcd18aa9"
     triggerId="searchWidgetTrigger">
   </gen-search-widget>
+
+  <script>
+    // OPTIONAL: For backend to generate authToken, insert it here
+    const searchWidget = document.querySelector('gen-search-widget');
+    // searchWidget.authToken = "<JWT or OAuth token>";
+  </script>
 </body>
 </html>
