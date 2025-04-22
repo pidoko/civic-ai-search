@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Civic Unlock</title>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LM97CT6GBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LM97CT6GBZ');
+  </script>
+
+  <style>
+    :root {
+      --primary-color: #00467f;
+      --accent-color: #0077cc;
+      --bg-light: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+      --text-color: #222;
+    }
+
+    [data-theme="dark"] {
+      --bg-light: linear-gradient(to bottom right, #1e1e1e, #2c2c2c);
+      --text-color: #f3f3f3;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-color);
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .branding {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent-color);
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    .hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="branding">Civic<span style="color: var(--accent-color)">Unlock</span></h1>
+    <p class="subtitle">Unlocking civic knowledge for everyone</p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/whitehorse">Whitehorse</a>
+      <!-- Future: <a href="/toronto">Toronto</a> -->
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Understand your city like never before</h2>
+    <p>
+      Civic Unlock turns civic documents and government data into clear, searchable insights.
+      Get updates, track decisions, and explore how your city runs — all in one place.
+    </p>
+    <p><a href="/whitehorse">Explore Whitehorse Civic AI Search →</a></p>
+  </section>
+
+  <footer>
+    Powered by Google Vertex AI · Designed for civic transparency
+  </footer>
+</body>
+</html>
