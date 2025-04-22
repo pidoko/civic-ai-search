@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whitehorse - Civic Unlock</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LM97CT6GBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LM97CT6GBZ');
+  </script>
+
+  <style>
+    :root {
+      --primary-color: #00467f;
+      --accent-color: #0077cc;
+      --bg-light: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+      --text-color: #222;
+    }
+
+    [data-theme="dark"] {
+      --bg-light: linear-gradient(to bottom right, #1e1e1e, #2c2c2c);
+      --text-color: #f3f3f3;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-color);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .branding {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .tagline {
+      margin: 1rem auto;
+      max-width: 700px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem 4rem;
+    }
+
+    #searchWidgetTrigger {
+      width: 100%;
+      max-width: 600px;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      background: white;
+      color: var(--text-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="branding">Civic<span style="color: var(--accent-color)">Unlock</span></h1>
+    <p class="subtitle">City of Whitehorse</p>
+    <p class="tagline">
+      Ask questions based on official City Council Agendas, Minutes, and Reports.<br>
+      Get reliable answers with citations from:
+      <a href="https://www.whitehorse.ca/our-government/city-council/meetings/agendas-minutes-and-reports/" target="_blank">
+        whitehorse.ca/city-council/meetings
+      </a>
+    </p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/whitehorse">Whitehorse</a>
+    </nav>
+  </header>
+
+  <div class="search-container">
+    <input placeholder="Ask about city council actions..." id="searchWidgetTrigger" aria-label="Search civic documents"/>
+  </div>
+
+  <gen-search-widget
+    configId="c6d6616c-c71f-4f1b-b5af-9344fcd18aa9"
+    triggerId="searchWidgetTrigger">
+  </gen-search-widget>
+
+  <footer>
+    Powered by Google Vertex AI Search · Built for the residents of Whitehorse
+  </footer>
+
+  <script>
+    const placeholderTexts = [
+      "Were there any discussions about new housing developments in Whistle Bend?",
+      "What infrastructure projects were approved in 2024?",
+      "Did Council discuss transportation upgrades for 2025?"
+    ];
+
+    let index = 0;
+    setInterval(() => {
+      const input = document.getElementById('searchWidgetTrigger');
+      if (input) {
+        input.setAttribute('placeholder', placeholderTexts[index]);
+        index = (index + 1) % placeholderTexts.length;
+      }
+    }, 4000);
+  </script>
+</body>
+</html>
