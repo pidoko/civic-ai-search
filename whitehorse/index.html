@@ -272,6 +272,11 @@
       document.documentElement.setAttribute('data-theme', savedTheme);
       document.querySelector('.dark-toggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
     }
+
+    // Activate the Gen App Builder Search Widget
+    window.addEventListener('load', () => {
+      window.genSearchWidget('c6d6616c-c71f-4f1b-b5af-9344fcd18aa9', 'searchWidgetTrigger');
+    });
   </script>
 </body>
 </html>
