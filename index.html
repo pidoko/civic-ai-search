@@ -263,14 +263,14 @@
       const next = current === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       localStorage.setItem('civic-theme', next);
-      document.querySelector('.dark-toggle').textContent = next === 'dark' ? '☀️' : '🌑';
+      document.querySelector('.dark-toggle').textContent = next === 'dark' ? '🌑' : '☀️';
     }
 
     // Persist dark mode preference
     const savedTheme = localStorage.getItem('civic-theme');
     if (savedTheme) {
       document.documentElement.setAttribute('data-theme', savedTheme);
-      document.querySelector('.dark-toggle').textContent = savedTheme === 'dark' ? '☀️' : '🌑';
+      document.querySelector('.dark-toggle').textContent = savedTheme === 'dark' ? '🌑' : '☀️';
     }
   </script>
 </body>
