@@ -1,11 +1,11 @@
-# CivicAI: Search Whitehorse City Council Meetings with LLM-Powered Precision
+# CivicUnlock: Search Whitehorse City Council Meetings with LLM-Powered Precision
 [[civicunlock.com](https://civicunlock.com)]
 
-**CivicAI** is an AI-powered semantic search interface for exploring official documents; agendas, minutes, and reports, published by the City Council of Whitehorse, Yukon. Built using **Google Vertex AI Search**, this project transforms a static archive of PDFs into a conversational search experience grounded in city policy, planning, and decisions.
+**CivicUnlock** is an AI-powered semantic search interface for exploring official documents; agendas, minutes, and reports, published by the City Council of Whitehorse, Yukon. Built using **Google Vertex AI Search**, this project transforms a static archive of PDFs into a conversational search experience grounded in city policy, planning, and decisions.
 
 ## Why This Project Matters
 
-Traditional government archives are not search-friendly. Meeting minutes and agenda packages contain valuable insights on housing, infrastructure, zoning, and budget allocations, yet they’re buried in dated PDFs. **CivicAI democratizes access to civic records** making it easy for residents, researchers, and journalists to ask questions and get answers with citations from the original documents.
+Traditional government archives are not search-friendly. Meeting minutes and agenda packages contain valuable insights on housing, infrastructure, zoning, and budget allocations, yet they’re buried in dated PDFs. **CivicUnlock democratizes access to civic records** making it easy for residents, researchers, and journalists to ask questions and get answers with citations from the original documents.
 
 ---
 
