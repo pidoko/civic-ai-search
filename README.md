@@ -31,7 +31,7 @@ These include:
 | Vector Indexing        | Vertex AI Matching Engine           |
 | Semantic Search        | Vertex AI Search (Generative RAG)   |
 | Frontend Integration   | Custom HTML + Google Search Widget  |
-| Hosting                | GitHub Pages                        |
+| Hosting                | GoDaddy                             |
 
 ---
 
